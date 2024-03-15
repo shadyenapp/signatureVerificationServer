@@ -1,6 +1,6 @@
 # Signature Verification Server in C
 
-Base socket/file transfer server provided by [nikhilroxtomar](https://github.com/nikhilroxtomar/File-Transfer-using-TCP-Socket-in-C/blob/master/server.c)
+Base socket/file transfer server provided by [nikhilroxtomar](https://github.com/nikhilroxtomar/File-Transfer-using-TCP-Socket-in-C/blob/master/server.c). Modified to meet needs for a project, the verification of x.509 signatures and then running a script. 
 
 ## Setup
 Before running the client or server a private and public keypair is needed. In my tests, I used an RSA 256 keypair to mimic an x.509 certificate.
