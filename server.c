@@ -45,16 +45,16 @@ void unzip(void){
 /*Signature verification and running of script*/
 void verifySignature(void) {
     FILE *fp;
-    char buffer[100];
-    char *value;
+    char buffer[12];
+    int value;
     printf("[+]Verifying Signature\n");
     /*Verify script from signature using openssl and save it to a file called verification.txt*/
     system("openssl dgst -sha256 -verify public.pem -signature sig script.sh > verification.txt");
     fp = fopen("verification.txt", "r");
-    fgets(buffer, 100, fp);
+    fgets(buffer, 12, fp);
     /*If the result from the openssl command contains Verified OK, it will run the script*/
-    value = strstr(buffer, "Verified OK");
-    if (value = "Verified OK") {
+    value = strcmp(buffer, "Verified OK");
+    if (value == 0) {
         printf("[+]Script is Verified to be OK\n");
         printf("[+]Running Script-------\n\n");
         /*Add execute commands to script in case*/
