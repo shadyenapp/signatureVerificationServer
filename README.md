@@ -28,3 +28,4 @@ The make file compiles both server and client using:
 ```Shell
 make all
 ```
+## Example outputs:
