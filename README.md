@@ -29,3 +29,18 @@ The make file compiles both server and client using:
 make all
 ```
 ## Example outputs:
+The outputs and test cases done below are using a script.sh file that is one line:
+```Shell
+echo "test"
+```
+**Server Success with verified signature**
+<br>
+![Server Sucess](https://github.com/shadyenapp/signatureVerificationServer/blob/main/TestCaseImages/ServerOutputSuccess.png)
+<br>
+**Server Failure with unmatching signature**
+<br>
+![Server Failure](https://github.com/shadyenapp/signatureVerificationServer/blob/main/TestCaseImages/ServerOutputFailure.png)
+<br>
+**Client Success in sending file**
+<br>
+![Client Success](https://github.com/shadyenapp/signatureVerificationServer/blob/main/TestCaseImages/ClientOutputSuccess.png)
