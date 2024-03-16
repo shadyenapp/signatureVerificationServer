@@ -49,6 +49,7 @@ void verifySignature(void) {
     int value;
     printf("[+]Verifying Signature\n");
     /*Verify script from signature using openssl and save it to a file called verification.txt*/
+    /*CHANGE sig and CHANGE script.sh to desired names*/
     system("openssl dgst -sha256 -verify public.pem -signature sig script.sh > verification.txt");
     fp = fopen("verification.txt", "r");
     fgets(buffer, 12, fp);
