@@ -19,7 +19,7 @@ The signature can be made using openssl and a public/private keypair:
 ```Shell
 openssl dgst -sha256 -sign [private key] -out [signature] [file]
 ```
-The Client then takes the compressed tarball and sends it to the server.
+The Client then takes the compressed tarball and sends it to the server. Note that the script must be named _script.sh_ and the signature file must be named _sig_ to match the code. 
 ## Server
 The server takes the tarball recieved from the client, unzips it into _sig_ and _script.sh_. If the script is verified by the said signature, the server will run the script and exit.  
 
